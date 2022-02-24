@@ -10,7 +10,7 @@ RSS_FEEDS = {'bbc': 'http://feeds.bbci.co.uk/news/rss.xml',
 
 @app.route("/")
 @app.route("/<publication>")
-def get_news(publication):
+def get_news(publication="bbc"):
     return get_news(publication)
 
 
@@ -20,7 +20,7 @@ def get_news(publication):
 
     return """<html>
        <body>
-           <h1>Headlines </h1>
+           <h1>Headlines here and all </h1>
            <b>{0}</b> </ br>
            <i>{1}</i> </ br>
            <p>{2}</p> </ br>
